@@ -10,7 +10,7 @@ body{
     text-align: center;
 }
 h1{
-    font-family: 'Gudea', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     transition: all 0.5s ease 0s;
 }
 h1:hover{
@@ -314,5 +314,5 @@ button:hover{
 
 
 h1{
-    font-family: 'Gudea', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
