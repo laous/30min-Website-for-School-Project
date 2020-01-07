@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SMI 2019</title>
+    <link rel="stylesheet" href="main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Calistoga|Fredoka+One|Montserrat:500|Roboto+Mono:500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        table,td,tr{
+            border: 1px solid white;
+        }
+    </style>
+</head>
+<body>
+    <div id="mont">
+        <div id="mydiv">
+            <button onClick="monter()">Monter</button>
+            <button onclick="arret()">Arreter</button>
+            <button onclick="desc()">Descendre</button>
+        </div>
+        <img src="images/mont.png" id="montimg"> 
+    </div>
+    <p id="para">Vous etes ici depuis 00h : 00m : 00s</p>
+    
+    <script>
+        var s=0,h=0,m=0;
+        var tmp;
+        function temps(){
+            var pp=document.getElementById("para");
+            s=parseInt(s)+1;
+            if(s>59){s=0;m=parseInt(m)+1;}
+            if(m>59){m=0;h=parseInt(h)+1;}
+            if(s<10){s="0"+s;}
+            if(m<10){m="0"+parseInt(m);}
+            if(h<10){h="0"+parseInt(h);}
+            pp.innerHTML="Vous etes ici depuis "+h+"h : "+m+"m : "+s+"s";
+            tmp=setTimeout(temps,1000);
+        }
+        temps();
+
+
+
+
+        var img=document.getElementById("montimg");
+        img.style.top="150";
+        var count ;
+        var count2;
+        function arret(){
+            clearTimeout(count);
+            clearTimeout(count2);
+        }
+        function desc(){
+            clearTimeout(count);
+            var img=document.getElementById("montimg");
+            img.style.top=parseInt(img.style.top)+1;
+            count2 = setTimeout(desc,100);
+            
+        }
+        function monter(){
+            clearTimeout(count2);
+            var img=document.getElementById("montimg");
+            img.style.top=parseInt(img.style.top)-1;
+            count = setTimeout(monter,100);
+            
+        }
+    </script>
+</body>
+</html>

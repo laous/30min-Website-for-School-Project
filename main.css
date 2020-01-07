@@ -4,13 +4,16 @@
     box-sizing: border-box;
     font-family: 'Varela Round', sans-serif;
 }
+html{
+  scroll-behavior: smooth;
+}
 body{
     background-color: #24252A;
     justify-content: center;
     text-align: center;
 }
 h1{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Calistoga', cursive;
     transition: all 0.5s ease 0s;
 }
 h1:hover{
@@ -32,13 +35,12 @@ header{
 header h1 {
   font-family: 'Montserrat', sans-serif;
   color: aliceblue;
-  transition: all 2s linear ;
+  transition: all 0.8s linear ;
   letter-spacing: 1rem;
 }
 header h1:hover {
   color: #008CBA;
-  text-decoration: underline;
-  cursor: pointer;
+    cursor: pointer;
 }
 .logo{
     cursor: pointer;
@@ -281,6 +283,9 @@ button:hover{
       typing 3.5s steps(30, end),
       blink-caret .5s step-end infinite;
   }
+  .typewriter h1:hover{
+    color: #d89cf6;
+  }
   
   /* The typing effect */
   @keyframes typing {
@@ -293,12 +298,18 @@ button:hover{
     from, to { border-color: transparent }
     50% { border-color: orange }
   } */
-  
+  #mont img{
+    right: 250px;
+  }
   
 /***************** ABOUT US***************/
 .about-us{
   display: inline-flex;
   background-color: white;
+  margin: 0;
+  width: 100%;
+  padding-top: 4%;
+  padding-bottom:3% ;
 }
 .aboutimage img {
   border-radius: 50%;
@@ -308,11 +319,42 @@ button:hover{
 }
 .about-text p{
   text-align: justify;
-  margin-left: 7%;
+  margin-left: 17%;
   margin-right: 7%;
 }
-
-
 h1{
-    font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.couleur h1:hover {
+  color:#70a1ff;
+}
+/************************ MONT **********************/
+#mont{
+  display: flex;
+}
+
+#montimg{
+  width: 200px;
+  height: 250px;
+  position: absolute; 
+  top:150;
+}
+#mydiv{
+    margin-top: 200px;
+    margin-left: 180px;
+
+}
+#mydiv button{
+  background-color: #008CBA;
+}
+#mydiv button:hover{
+  background-color: silver;
+}
+#para{
+  position: fixed;
+  bottom: 80px;
+  left: 40%;
+  color: #ddd;
 }
