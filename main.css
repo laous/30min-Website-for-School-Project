@@ -10,7 +10,7 @@ body{
     text-align: center;
 }
 h1{
-    font-family: 'Calistoga', cursive;
+    font-family: 'Gudea', sans-serif;
     transition: all 0.5s ease 0s;
 }
 h1:hover{
@@ -310,4 +310,9 @@ button:hover{
   text-align: justify;
   margin-left: 7%;
   margin-right: 7%;
+}
+
+
+h1{
+    font-family: 'Gudea', sans-serif;
 }
